@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>War Game</title>
+</head>
+
+<body class="color">
+    <div class="div display" id="game-display">
+        <div class="part">
+            <div class="name" id="name-1">Player-1</div>
+            <div class="image"><img src="./images/warrior2.jpg" alt="loading" class="img" id="p-img-1"></div>
+            <div class="attack-dv">A:<button class="btn-attack" id="attacking-1">Attack here</button></div>
+            <div class="heal-dv">Z:<button class="btn-heal" id="healing-1">Heal here++</button></div>
+            <div class="score" id="score-1">Score : 100</div>
+        </div>
+        <div class="versus">v/s</div>
+        <div class="part">
+            <div class="name" id="name-2">Player-2</div>
+            <div class="image"><img src="./images/warrior1.jpg" alt="loading" class="img" id="p-img-2"></div>
+            <div class="attack-dv">L:<button class="btn-attack" id="attacking-2">Attack here</button></div>
+            <div class="heal-dv">M:<button class="btn-heal" id="healing-2">Heal here++</button></div>
+            <div class="score" id="score-2">Score : 100</div>
+        </div>
+    </div>
+    <div class="status display" id="status">***All the best for both players***</div>
+    <div class="reset-div display" id="reset-btn-display"><button class="reset" id="gameReset">Reset</button></div>
+
+
+    <section class="form" id="form-display">
+        <div class="center">
+            <div class="head">****Rules of the game****</div>
+            <ul>
+                <li class="items">This game is purely based on computer which picks random amount of damamge or heal
+                    amount when player attack's or heal their avatar respectively!</li>
+                <li class="items">In order to attack or heal your player user need to prees the respective key's
+                    mention beside their attack or heal button.</li>
+                <li class="items">At last there is a reset button which resets the whole game</li>
+                <li class="items">In order to start the game users need to mention their names asked below.
+                    And finally click the Start button to play the fantastic game!
+                </li>
+            </ul>
+            <input type="text" id="name1" name="playerone" placeholder="Player-1" required><br>
+            <input type="text" id="name2" name="playertwo" placeholder="Player-2" required><br>
+            <div><input class="btn" type="submit" id="start-btn" value="Start"></div>
+        </div>
+    </section>
+
+    <audio src="./audios/attack.mp3" type="mpeg" id="audio1"></audio>
+    <audio src="./audios/heal.mp3" type="mpeg" id="audio2"></audio>
+    <audio src="./audios/victory.mp3" type="mpeg" id="audio3"></audio>
+    <script src="home.js"></script>
+</body>
+
+</html>
