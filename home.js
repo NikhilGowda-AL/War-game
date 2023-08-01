@@ -29,15 +29,13 @@ resetDisplay = document.getElementById("reset-btn-display")
 start = document.getElementById("start-btn")
 
 
-
 start.addEventListener("click", () => {
-    
+
     let value = true;
 
     if (enteredname1.value == "" || enteredname2.value == "") {
         value = false
     }
-
 
     if (value == true) {
         formDisplay.style.display = "none";
@@ -46,13 +44,11 @@ start.addEventListener("click", () => {
         resetDisplay.style.visibility = "visible";
     }
 
-
     function updateGame(p1, p2, gameState) {
         name1.innerText = p1.name
         name2.innerText = p2.name
         score1.innerText = "score : " + p1.health.toString()
         score2.innerText = "score : " + p2.health.toString()
-
 
         if (p1.health <= 0 || p2.health <= 0) {
             game.isOver = true
@@ -61,14 +57,12 @@ start.addEventListener("click", () => {
         }
     }
 
-
     class gamePlayer {
         constructor(name, health, attackdmg) {
             this.name = name
             this.health = health
             this.attackdmg = attackdmg
         }
-
 
         strike(enemy, player) {
             let damage = Math.floor(Math.random() * 10)
@@ -77,7 +71,6 @@ start.addEventListener("click", () => {
             updateGame(p1, p2, game.isover)
         }
 
-
         heal(player) {
             let healingAmount = Math.floor(Math.random() * 10)
             player.health += healingAmount
@@ -85,9 +78,7 @@ start.addEventListener("click", () => {
             updateGame(p1, p2, game.isover)
         }
 
-
     }
-
 
     let player1 = new gamePlayer(enteredname1.value, 100, 10)
 
@@ -97,7 +88,6 @@ start.addEventListener("click", () => {
         constructor() {
             this.isOver = false;
         }
-
 
         declareResult(isOver, p1, p2) {
             let message;
@@ -111,7 +101,6 @@ start.addEventListener("click", () => {
             return message
         }
 
-
         reset(p1, p2, isOver) {
             p1.health = 100
             p2.health = 100
@@ -119,9 +108,7 @@ start.addEventListener("click", () => {
             updateGame(p1, p2, game.isover)
         }
 
-
     }
-
 
     let p1 = player1
     let p2 = player2
@@ -136,7 +123,6 @@ start.addEventListener("click", () => {
     })
 
 
-
     window.addEventListener("keydown", (e) => {
 
         if (e.key == "a") {
@@ -146,7 +132,6 @@ start.addEventListener("click", () => {
             }
         }
 
-
         else if (e.key == "z") {
             if (p1.health > 0 && game.isOver == false) {
                 p1.heal(p1)
@@ -154,14 +139,12 @@ start.addEventListener("click", () => {
             }
         }
 
-
         else if (e.key == "l") {
             if (p2.health > 0 && game.isOver == false) {
                 p2.strike(p1, p2)
                 attack.play()
             }
         }
-
 
         else if (e.key == "m") {
             if (p2.health > 0 && game.isOver == false) {
