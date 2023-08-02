@@ -13,8 +13,11 @@ attack and healing buttons to use against their opponent and themselves, respect
 
 ### Initial page
 This page mainly consists of rules of game and asks player's respective names
+
 ![ALT](/readmeImages/rulepage.png)
+
 
 ### Gaming page
 This page updates every activities of players
+
 ![ALT](/readmeImages/gamepage.png)
